@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import Navbar from './Spotify/Navbar'
+import { Routes, Route } from 'react-router-dom'
+import Login from './Spotify/Login'
+import Register from './Spotify/Register';
+//import Auth from './Spotify/Auth';
+const Auth = React.lazy(() => import('./Spotify/Auth'));
 
-function App() {
+
+export default function App() {
+  const user = localStorage.getItem("user") !== null ? JSON.parse(localStorage.getItem("user")) : null;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {user !== null ? <Navbar /> :
+        <Routes>
+          <Route path="auth" element={
+            <Suspense fallback={<h1>Loading...</h1>}>
+              <Auth />
+            </Suspense>}>
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+          </Route>
+        </Routes>}
     </div>
-  );
+  )
 }
-
-export default App;
