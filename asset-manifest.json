@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/spotify/static/css/main.2dd24a83.css",
+    "main.js": "/spotify/static/js/main.670bc33f.js",
+    "static/js/161.529d2906.chunk.js": "/spotify/static/js/161.529d2906.chunk.js",
+    "static/js/787.1937f22b.chunk.js": "/spotify/static/js/787.1937f22b.chunk.js",
+    "static/media/image4.jpg": "/spotify/static/media/image4.1a8c5a3f2decacbad979.jpg",
+    "static/media/image1.jpg": "/spotify/static/media/image1.51197ff4346ba1c20e7c.jpg",
+    "static/media/image2.jpg": "/spotify/static/media/image2.cb2cd553c8f188f4c57f.jpg",
+    "static/media/image3.jpg": "/spotify/static/media/image3.317e10601326032ea50c.jpg",
+    "index.html": "/spotify/index.html",
+    "main.2dd24a83.css.map": "/spotify/static/css/main.2dd24a83.css.map",
+    "main.670bc33f.js.map": "/spotify/static/js/main.670bc33f.js.map",
+    "161.529d2906.chunk.js.map": "/spotify/static/js/161.529d2906.chunk.js.map",
+    "787.1937f22b.chunk.js.map": "/spotify/static/js/787.1937f22b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2dd24a83.css",
+    "static/js/main.670bc33f.js"
+  ]
+}
